@@ -1,0 +1,3 @@
+Comece a estudar LAYOUT ANDROID.
+
+Eu quero que VC coloque uma barra superior e deixe mais "bonito" isso que VC já fez. Bonito que eu digo é estruturar direitinho essas informações na tela. Isso é agora é de boa... Quando VC fizer, me mande q eu já te passo outra coisa mais complexa um pouco... Nessa barra eu quero tbm que tenha um botão de menu com a opção "Sobre este app" que clicando vai aparecer um dialog com um título e texto sobre o app. Deve ter apenas um botão "ok" que irá simplesmente fechar o dialog

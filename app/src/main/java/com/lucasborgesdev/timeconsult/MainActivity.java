@@ -1,6 +1,8 @@
 package com.lucasborgesdev.timeconsult;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -37,7 +39,29 @@ public class MainActivity extends AppCompatActivity implements ConsultaSituacaoT
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            String dialog_title = "ConsultWeather";
+            String dialog_message = "Este aplicativo busca dados climáticos da API openweathermap.org" +
+                    "\n"
+                    + "lucasborgesdev.com.br";
+
+            // criar dialog do menu sobre este app
+            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+
+            // Setando Título do dialog
+            alertDialog.setTitle(dialog_title);
+            // Mensagem do dialog
+            alertDialog.setMessage(dialog_message);
+            //
+            alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // ação ao clicar no botão OK
+                }
+            });
+
+            alertDialog.show();
+
             return true;
         }
 

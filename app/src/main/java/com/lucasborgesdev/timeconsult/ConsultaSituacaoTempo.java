@@ -67,10 +67,10 @@ public class ConsultaSituacaoTempo extends AsyncTask<Void, Void, String> {
         JSONObject wind = object.getJSONObject("wind");
         int velocVento = wind.getInt("speed");
 
-        JSONObject sys = object.getJSONObject("sys");
-        String pais = sys.getString("country");
+        //JSONObject sys = object.getJSONObject("sys");
+        //String pais = sys.getString("country");
 
-        return "Condições Climáticas em " + name + " - " + pais +":"
+        return "Condições Climáticas em " + name + ":"
                 + "\n" + descricao
                 + "\nTemperatura Atual: " + temperatura + "ºC"
                 + "\nHumidade relativa do ar: " + humidade + "%"

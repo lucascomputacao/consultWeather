@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">TimeConsult</string>
+    <string name="app_name">ConsultWeather</string>
 
     <string name="carregando">Carregando</string>
+    <string name="sobre_este_app">Sobre este app</string>
+    <string name="menu_about"></string>
     <string name="action_settings">Settings</string>
 </resources>
