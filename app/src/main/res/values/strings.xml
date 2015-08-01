@@ -5,4 +5,5 @@
     <string name="sobre_este_app">Sobre este app</string>
     <string name="menu_about"></string>
     <string name="action_settings">Settings</string>
+    <string name="title_app">ConsultWeather</string>
 </resources>

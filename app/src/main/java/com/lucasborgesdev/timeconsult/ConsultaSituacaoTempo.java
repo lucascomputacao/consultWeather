@@ -28,6 +28,7 @@ public class ConsultaSituacaoTempo extends AsyncTask<Void, Void, String> {
     }
 
     @Override
+    // Cria nova thread para buscar dados
     protected String doInBackground (Void... params) {
 
         try {
@@ -53,7 +54,7 @@ public class ConsultaSituacaoTempo extends AsyncTask<Void, Void, String> {
         JSONObject jsonObjectWeather = jsonArray.getJSONObject(0);
 
         // descrição do tempo na cidade
-        String descricao = jsonObjectWeather.getString("description").toUpperCase();
+        String descricao = jsonObjectWeather.getString("description");
 
         // nome da cidade
         String name = object.getString("name");
@@ -70,8 +71,8 @@ public class ConsultaSituacaoTempo extends AsyncTask<Void, Void, String> {
         //JSONObject sys = object.getJSONObject("sys");
         //String pais = sys.getString("country");
 
-        return "Condições Climáticas em " + name + ":"
-                + "\n" + descricao
+        return "Condições climáticas: " + "\n"
+                +  name + ": " + descricao
                 + "\nTemperatura Atual: " + temperatura + "ºC"
                 + "\nHumidade relativa do ar: " + humidade + "%"
                 + "\nTemperatura Mínima: " + tempMin + "ºC"
@@ -103,7 +104,7 @@ public class ConsultaSituacaoTempo extends AsyncTask<Void, Void, String> {
             return new String(buffer);
 
         } finally {
-            if(is!=null){
+            if (is != null){
                 is.close();
             }
         }
